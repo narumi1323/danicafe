@@ -1,0 +1,403 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kalnia&family=Libre+Baskerville&family=Playfair+Display:wght@400;500;600&family=Raleway:wght@400;500;700&family=Single+Day&display=swap');
+
+ *{
+  margin: 0;
+ }
+ html {
+   font-size: 100%;
+ }
+
+ body {
+  font-family: "Kalnia", sans-serif;
+  line-height: 1.7;
+  color: #432;
+ }
+
+ a {
+   text-decoration: none;
+ }
+
+ img {
+  max-width: 100%;
+ }
+
+ /* header */
+
+.logo {
+  width: 100px;
+  margin-top: 14px;
+  border-radius: 50%;
+}
+
+.main-nav {
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+.main-nav li {
+   margin-left: 36px;
+}
+
+.main-nav a {
+  color:rgb(227, 195, 51);
+}
+
+.main-nav a:hover{
+   color: brown;
+}
+
+.page-header {
+   display: flex;  /*横並びの指定 */
+   justify-content: space-between;    /*両橋の設置の指定 */
+}
+
+.wrapper {            /*このワラッパーは全体に対して影響を与えるようにHTML上の各親クラスに記載されている */
+  max-width: 1100px;
+  margin: 0 auto;     /*中央に配置する指定 */
+  padding: 0 4%;     /*スマホ向けの余白の指定 */
+}
+
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
+
+.page-title {
+  font-size: 4rem;
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+.button {
+  font-size: 1.375rem;
+  background:salmon;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.button:hover {
+  background: brown;
+}
+
+.big-bg {
+  background-size: cover;    /*画面の縦横の比率を保ったまま画面いっぱいに広げたい時*/
+  background-position: center top;
+}
+
+#home {
+  background-image: url(../images/cafevibe.png);
+  /* background-image: radial-gradient(#FAEED1,#EAD196);  グラデーションバージョン*/   
+  min-height: 100vh;
+}
+
+/* NEWS header */
+#news {
+  background-image: url(../images/cafevibe.png);
+  height: 370px;
+  margin-bottom: 40px;
+  background-position: center 70%;
+}
+
+
+#news .page-title {
+  text-align: center;
+  color: rgb(231, 191, 12);
+}
+
+/*   fotter */
+footer {
+   background: #432;
+   text-align: center;
+   padding: 26px 0;
+   width: 100%;
+ }
+
+footer p {
+   color: rgb(226, 187, 15);
+   font-size: 0.875rem;
+}
+
+/* contents */
+article {
+  width: 74%;
+}
+
+aside {
+  width: 22%;
+}
+
+.news-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.post-info {
+  position: relative;
+  padding-top: 4px;
+  margin-bottom: 40px;
+}
+
+.post-date {
+  background: salmon;
+  border-radius: 50%;
+  color: aliceblue;
+  width: 100px;
+  height: 100px;
+  font-size: 1.625rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+
+.post-date span {
+   font-size: 1rem;
+   border-top: 1px rgba(255, 255, 255,.5) solid;
+   padding-top: 6px;
+   display: block;
+   width: 60%;
+   margin: 0 auto;
+}
+
+.post-title {
+   font-size: 2rem;
+   font-weight: normal;
+}
+
+.post-title,.post-cat {
+   margin-left: 120px;
+}
+
+article img {
+  margin-bottom: 20px;
+}
+
+article p {
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 1.375rem;
+  padding: 0 8px 8px;  /*ue migihidari sita*/
+  border-bottom: 2px #432 solid;
+  font-weight: normal;
+}
+
+aside p {
+   padding: 12px 10px;
+}
+
+.sub-menu {
+   margin-bottom: 60px;
+   list-style: none;
+}
+
+.sub-menu li {
+   border-bottom: 1px #ddd solid;
+}
+
+.sub-menu a {
+   color:rgb(228, 189, 13);
+   padding: 10px;
+   display: block;
+}
+
+.sub-menu a:hover {
+  color: brown;
+}
+
+/* mobile ver */
+@media (max-width:600px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  /* header */
+  .main-nav {
+   font-size: 1rem;
+   margin-top: 10px;
+ }
+  .main-nav {
+    margin: 0 20px;
+  }
+  /* home */
+  .home-content {
+    margin-top: 20%;
+  }
+
+  .page-header {
+     flex-direction: column;
+     align-items: center;
+  }
+
+  /* News area */
+  .news-contents {
+    flex-direction: column;
+  }
+  article,aside {
+    width: 100%;
+  }
+  #news .page-title {
+    margin-top: 30px;
+  }
+  aside {
+    margin-top: 60px;
+  }
+  .post-info {
+    margin-bottom: 30px;
+  }
+  .post-date {
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  .post-date span {
+    font-size: 0.875rem;
+    padding-top: 2px;
+  }
+  .post-title {
+    font-size: 1.375rem;
+  }
+  .post-cat {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+  .post-title,.post-cat {
+    margin-left: 80px;
+  }
+  /* menu area */
+  .menu-content {
+    margin-top: 20%;
+  }
+
+  /* Contact area */
+  #contact .page-title {
+    margin-top: 40px;
+  }
+  /* form area */
+  input[type="text"],input[type="email"],textarea {
+     max-width: 100%;
+  }
+}
+
+/* article {
+  width: 60%;
+}
+
+.ad img {
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* MENU Area */
+#menu {
+  background-image: url(../images/menu-d.png);
+  min-height: 100vh;
+}
+
+.menu-content {
+   max-width: 560px;
+   margin-top: 10%;
+   color: beige;
+}
+
+.menu-content .page-title {
+  text-align: center;
+}
+
+.menu-content p {
+   font-size: 1.125rem;
+   margin: 10px 0 0;
+}
+
+.grid {
+   display: grid;
+   gap: 26px;
+   grid-template-columns: repeat(auto-fit, minmax(240px,1fr));  /* 240pxよりは要素の幅が小さくならず、画面の幅に合わせて伸縮する another way to write: (1fr 1fr 1fr)*/
+   margin-top: 6%;
+   margin-bottom: 50px;
+}
+
+.grid img {
+   width: 300px;
+   height: 300px;
+   object-fit: cover;
+}
+
+/* Contact Area */
+#contact {
+   background-image: url(../images/tree.jpeg);
+   min-height: 100vh;
+}
+
+/* form */
+form div {
+  margin-bottom: 14px;
+}
+
+label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="text"],input[type="email"],textarea {
+   background: rgba(255, 255, 255,.5);
+   border-radius: 5px;
+   padding: 10px;
+   font-size: 1rem;
+}
+
+input[type="text"],input[type="email"] {
+  width: 100%;
+  max-width: 240px;
+}
+
+textarea {
+   width: 100%;
+   max-width: 480px;
+   height: 6rem;
+}
+
+input[type="submit"] {
+   border: none;
+   cursor: pointer;
+   line-height: 1;
+}
+
+/* store map */
+#location {
+  padding: 4% 0;
+}
+
+#location .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-info {
+  width: 22%;
+}
+
+.location-info p {
+  padding: 12px 10px;
+}
+
+.location-map {
+  width: 74%;
+}
+
+iframe {
+  width: 100%;
+}
+
